@@ -1,0 +1,14 @@
+E:\csharp\ShiftAccess\ShiftAccess\bin\Release\ShiftAccess.exe.config
+E:\csharp\ShiftAccess\ShiftAccess\bin\Release\ShiftAccess.exe
+E:\csharp\ShiftAccess\ShiftAccess\bin\Release\ShiftAccess.pdb
+E:\csharp\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.csproj.ResolveComReference.cache
+E:\csharp\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.frmPrincipal.resources
+E:\csharp\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.Properties.Resources.resources
+E:\csharp\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.csproj.GenerateResource.Cache
+E:\csharp\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.exe
+E:\csharp\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.pdb
+E:\csharp\ShiftAccess\ShiftAccess\obj\Release\Interop.DAO.dll
+E:\csharp\ShiftAccess\ShiftAccess\bin\Release\ShiftAccess.exe.manifest
+E:\csharp\ShiftAccess\ShiftAccess\bin\Release\ShiftAccess.application
+E:\csharp\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.exe.manifest
+E:\csharp\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.application

@@ -1,0 +1,14 @@
+E:\csharp\ShiftAccess\ShiftAccess\obj\Debug\ShiftAccess.csproj.ResolveComReference.cache
+E:\csharp\ShiftAccess\ShiftAccess\obj\Debug\ShiftAccess.frmPrincipal.resources
+E:\csharp\ShiftAccess\ShiftAccess\obj\Debug\ShiftAccess.Properties.Resources.resources
+E:\csharp\ShiftAccess\ShiftAccess\obj\Debug\ShiftAccess.csproj.GenerateResource.Cache
+E:\csharp\ShiftAccess\ShiftAccess\obj\Debug\ShiftAccess.exe
+E:\csharp\ShiftAccess\ShiftAccess\obj\Debug\ShiftAccess.pdb
+E:\csharp\ShiftAccess\ShiftAccess\bin\Debug\ShiftAccess.exe.config
+E:\csharp\ShiftAccess\ShiftAccess\bin\Debug\ShiftAccess.exe.manifest
+E:\csharp\ShiftAccess\ShiftAccess\bin\Debug\ShiftAccess.application
+E:\csharp\ShiftAccess\ShiftAccess\bin\Debug\ShiftAccess.exe
+E:\csharp\ShiftAccess\ShiftAccess\bin\Debug\ShiftAccess.pdb
+E:\csharp\ShiftAccess\ShiftAccess\obj\Debug\ShiftAccess.exe.manifest
+E:\csharp\ShiftAccess\ShiftAccess\obj\Debug\ShiftAccess.application
+E:\csharp\ShiftAccess\ShiftAccess\obj\Debug\ShiftAccess.csprojResolveAssemblyReference.cache
