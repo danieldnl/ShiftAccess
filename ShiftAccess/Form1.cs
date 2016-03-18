@@ -36,40 +36,49 @@ namespace ShiftAccess
             }
         }
 
+        private bool existeProp(string propriedade, Database db)
+        {
+
+            if (db.Properties.GetType().GetType().GetMember(propriedade) != null)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private void AllowByPassKey(bool valor, DragEventArgs e)
         {
             string[] caminho = (string[])(e.Data.GetData(DataFormats.FileDrop));
             var dbe = new DBEngine();
             Database db = null;
             try
-            {            
+            {
                 db = dbe.OpenDatabase(caminho[0]);
-                db.Properties.Delete("AllowBypassKey");   
+                //db.GetType().GetProperty("AllowByPassKey");
+                if (existeProp("AllowByPassKey", db) == true)
+                    db.Properties.Delete("AllowBypassKey");
+                var prop = db.CreateProperty("AllowByPassKey", 1, valor);
+                db.Properties.Append(prop);
+                if (valor == false)
+                {
+                    lblResult.BackColor = SystemColors.GradientInactiveCaption;
+                    lblResult.Text = "\"" + caminho[0] + "\"" + " travado!";
+                }
+                else if (valor == true)
+                {
+                    lblResult.BackColor = SystemColors.GradientInactiveCaption;
+                    lblResult.Text = "\"" + caminho[0] + "\"" + " destravado!";
+                }
             }
             catch (Exception err)
             {
-                if (err.StackTrace.Contains("Access.Dao.Properties.Delete")== false)
-                    MessageBox.Show(err.ToString(),null,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(err.ToString(), null, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
-            {  
+            {
                 if (db != null)
-                {                 
-                    var prop = db.CreateProperty("AllowByPassKey", 1, valor);
-                    db.Properties.Append(prop);
-                    if (valor == false)
-                    {
-                        lblResult.BackColor = SystemColors.GradientInactiveCaption;
-                        lblResult.Text = "\"" + caminho[0] + "\"" + " travado!";
-                    }
-                    else if (valor == true)
-                    {
-                        lblResult.BackColor = SystemColors.GradientInactiveCaption;
-                        lblResult.Text ="\"" + caminho[0] + "\"" + " destravado!";
-                    }
-
                     db.Close();
-                }      
             }
         }
 
