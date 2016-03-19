@@ -36,28 +36,20 @@ namespace ShiftAccess
             }
         }
 
-        private bool existeProp(string propriedade, Database db)
-        {
-
-            if (db.Properties.GetType().GetType().GetMember(propriedade) != null)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
         private void AllowByPassKey(bool valor, DragEventArgs e)
         {
             string[] caminho = (string[])(e.Data.GetData(DataFormats.FileDrop));
-            var dbe = new DBEngine();
             Database db = null;
+
             try
             {
+                var dbe = new DBEngine();
+                
                 db = dbe.OpenDatabase(caminho[0]);
-                //db.GetType().GetProperty("AllowByPassKey");
-                if (existeProp("AllowByPassKey", db) == true)
-                    db.Properties.Delete("AllowBypassKey");
+
+                try{db.Properties.Delete("AllowByPassKey");}
+                catch{}
+                    
                 var prop = db.CreateProperty("AllowByPassKey", 1, valor);
                 db.Properties.Append(prop);
                 if (valor == false)
