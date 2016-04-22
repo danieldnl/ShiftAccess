@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Drawing;
 using Microsoft.Office.Interop.Access.Dao;
+using System.Diagnostics;
 
 namespace ShiftAccess
 {
@@ -65,7 +66,8 @@ namespace ShiftAccess
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.ToString(), null, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro inesperado ou arquivo inválido!\n\n" + err.Message , 
+                    null, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -99,6 +101,17 @@ namespace ShiftAccess
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             lblResult.Text = "";
+        }
+
+        private void mnuSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void mnuSobre_Click(object sender, EventArgs e)
+        {
+            frmSobre frm = new frmSobre();
+            frm.ShowDialog();
         }
     }
 }

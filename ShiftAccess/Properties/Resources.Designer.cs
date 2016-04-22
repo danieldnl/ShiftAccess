@@ -59,5 +59,15 @@ namespace ShiftAccess.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Padlock_128px_1179927_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("Padlock_128px_1179927_easyicon.net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

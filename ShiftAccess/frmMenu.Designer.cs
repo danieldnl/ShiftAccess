@@ -32,6 +32,12 @@
             this.lblTravar = new System.Windows.Forms.Label();
             this.lblDestravar = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
+            this.menuGeral = new System.Windows.Forms.MenuStrip();
+            this.mnuArquivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAjuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSobre = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuGeral.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTravar
@@ -77,6 +83,48 @@
             this.lblResult.Text = "label1";
             this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // menuGeral
+            // 
+            this.menuGeral.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuArquivo,
+            this.mnuAjuda});
+            this.menuGeral.Location = new System.Drawing.Point(0, 0);
+            this.menuGeral.Name = "menuGeral";
+            this.menuGeral.Size = new System.Drawing.Size(511, 24);
+            this.menuGeral.TabIndex = 3;
+            this.menuGeral.Text = "menuStrip1";
+            // 
+            // mnuArquivo
+            // 
+            this.mnuArquivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuSair});
+            this.mnuArquivo.Name = "mnuArquivo";
+            this.mnuArquivo.Size = new System.Drawing.Size(61, 20);
+            this.mnuArquivo.Text = "Arquivo";
+            // 
+            // mnuSair
+            // 
+            this.mnuSair.Name = "mnuSair";
+            this.mnuSair.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.mnuSair.Size = new System.Drawing.Size(135, 22);
+            this.mnuSair.Text = "Sair";
+            this.mnuSair.Click += new System.EventHandler(this.mnuSair_Click);
+            // 
+            // mnuAjuda
+            // 
+            this.mnuAjuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuSobre});
+            this.mnuAjuda.Name = "mnuAjuda";
+            this.mnuAjuda.Size = new System.Drawing.Size(24, 20);
+            this.mnuAjuda.Text = "?";
+            // 
+            // mnuSobre
+            // 
+            this.mnuSobre.Name = "mnuSobre";
+            this.mnuSobre.Size = new System.Drawing.Size(113, 22);
+            this.mnuSobre.Text = "Sobre...";
+            this.mnuSobre.Click += new System.EventHandler(this.mnuSobre_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,12 +133,20 @@
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.lblDestravar);
             this.Controls.Add(this.lblTravar);
+            this.Controls.Add(this.menuGeral);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuGeral;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShiftAccess | Trava ou destrava o uso da tecla shift no MsAccess";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
+            this.menuGeral.ResumeLayout(false);
+            this.menuGeral.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -99,6 +155,11 @@
         private System.Windows.Forms.Label lblTravar;
         private System.Windows.Forms.Label lblDestravar;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.MenuStrip menuGeral;
+        private System.Windows.Forms.ToolStripMenuItem mnuArquivo;
+        private System.Windows.Forms.ToolStripMenuItem mnuSair;
+        private System.Windows.Forms.ToolStripMenuItem mnuAjuda;
+        private System.Windows.Forms.ToolStripMenuItem mnuSobre;
     }
 }
 

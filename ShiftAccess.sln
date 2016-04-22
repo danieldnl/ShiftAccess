@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftAccess", "ShiftAccess\ShiftAccess.csproj", "{58A75BB8-3F36-4F20-B254-40F79778DED2}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ShiftAccessSetup", "ShiftAccessSetup\ShiftAccessSetup.vdproj", "{B8C6FDBF-85CD-451C-90FB-8A386E616563}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,12 @@ Global
 		{58A75BB8-3F36-4F20-B254-40F79778DED2}.Release|x64.Build.0 = Release|x64
 		{58A75BB8-3F36-4F20-B254-40F79778DED2}.Release|x86.ActiveCfg = Release|x86
 		{58A75BB8-3F36-4F20-B254-40F79778DED2}.Release|x86.Build.0 = Release|x86
+		{B8C6FDBF-85CD-451C-90FB-8A386E616563}.Debug|Any CPU.ActiveCfg = Debug
+		{B8C6FDBF-85CD-451C-90FB-8A386E616563}.Debug|x64.ActiveCfg = Debug
+		{B8C6FDBF-85CD-451C-90FB-8A386E616563}.Debug|x86.ActiveCfg = Debug
+		{B8C6FDBF-85CD-451C-90FB-8A386E616563}.Release|Any CPU.ActiveCfg = Release
+		{B8C6FDBF-85CD-451C-90FB-8A386E616563}.Release|x64.ActiveCfg = Release
+		{B8C6FDBF-85CD-451C-90FB-8A386E616563}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

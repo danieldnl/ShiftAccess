@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ShiftAccess")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Copyright ©  2016 - Daniel Carneiro Miranda - daniel.c.miranda@terra.com.br")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
