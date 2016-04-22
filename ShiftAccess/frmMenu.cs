@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using System.Drawing;
 using Microsoft.Office.Interop.Access.Dao;
-using System.Diagnostics;
 
 namespace ShiftAccess
 {
