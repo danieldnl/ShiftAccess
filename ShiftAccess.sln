@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiftAccess", "ShiftAccess\
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ShiftAccessSetup", "ShiftAccessSetup\ShiftAccessSetup.vdproj", "{B8C6FDBF-85CD-451C-90FB-8A386E616563}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ShiftAccessSetup_x64", "ShiftAccessSetup_x64\ShiftAccessSetup_x64.vdproj", "{D3710AB3-9CAE-469F-A707-5EE6613C9F4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,12 @@ Global
 		{B8C6FDBF-85CD-451C-90FB-8A386E616563}.Release|Any CPU.ActiveCfg = Release
 		{B8C6FDBF-85CD-451C-90FB-8A386E616563}.Release|x64.ActiveCfg = Release
 		{B8C6FDBF-85CD-451C-90FB-8A386E616563}.Release|x86.ActiveCfg = Release
+		{D3710AB3-9CAE-469F-A707-5EE6613C9F4B}.Debug|Any CPU.ActiveCfg = Debug
+		{D3710AB3-9CAE-469F-A707-5EE6613C9F4B}.Debug|x64.ActiveCfg = Debug
+		{D3710AB3-9CAE-469F-A707-5EE6613C9F4B}.Debug|x86.ActiveCfg = Debug
+		{D3710AB3-9CAE-469F-A707-5EE6613C9F4B}.Release|Any CPU.ActiveCfg = Release
+		{D3710AB3-9CAE-469F-A707-5EE6613C9F4B}.Release|x64.ActiveCfg = Release
+		{D3710AB3-9CAE-469F-A707-5EE6613C9F4B}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
