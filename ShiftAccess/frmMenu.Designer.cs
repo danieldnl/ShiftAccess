@@ -76,7 +76,7 @@
             // 
             this.lblResult.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.lblResult.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(0, 232);
+            this.lblResult.Location = new System.Drawing.Point(0, 226);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(512, 30);
             this.lblResult.TabIndex = 2;
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 279);
+            this.ClientSize = new System.Drawing.Size(511, 278);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.lblDestravar);
             this.Controls.Add(this.lblTravar);

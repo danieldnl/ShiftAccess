@@ -4,17 +4,17 @@
   <description asmv2:publisher="ShiftAccess" asmv2:product="ShiftAccess" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.5.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ShiftAccess.exe.manifest" size="4008">
+    <dependentAssembly dependencyType="install" codebase="ShiftAccess.exe.manifest" size="4028">
       <assemblyIdentity name="ShiftAccess.exe" version="1.0.0.11" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e/f0wNJePRdglmnLf8lmjsIERBgIX8QTqPKgslhOvH4=</dsig:DigestValue>
+        <dsig:DigestValue>MfCqR2Xfbr98msEwqlvglQBZrrO4sCaIJuE/DuAq+fY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

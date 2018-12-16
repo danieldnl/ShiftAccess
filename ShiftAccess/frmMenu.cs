@@ -7,21 +7,31 @@ namespace ShiftAccess
 {
     public partial class frmPrincipal : System.Windows.Forms.Form
     {
+
         public frmPrincipal()
         {
             InitializeComponent();
         }
 
-        private void lblTravar_DragEnter(object sender, DragEventArgs e)
+        private void Destravar(bool valor, DragEventArgs e)
         {
-            lblTravar.BackColor = SystemColors.GradientInactiveCaption;
-            EvDragEnter(e);
-        }
+            var caminho = (string[])e.Data.GetData(DataFormats.FileDrop);
 
-        private void lblTravar_DragDrop(object sender, DragEventArgs e)
-        {
-            AllowByPassKey(false, e);
-            lblTravar.BackColor = SystemColors.Control;
+            try
+            {
+                using (new AllowByPassKey(caminho[0], valor))
+                {
+                    lblResult.BackColor = SystemColors.GradientInactiveCaption;
+                    lblResult.Text = caminho[0] + " " + (valor ? "destravado" : "travado") + "!";
+                }
+                
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show("Erro inesperado ou arquivo inválido!\n\n" + err.Message,
+                    null, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }        
         }
 
         private void EvDragEnter(DragEventArgs e)
@@ -36,43 +46,16 @@ namespace ShiftAccess
             }
         }
 
-        private void AllowByPassKey(bool valor, DragEventArgs e)
+        private void lblTravar_DragEnter(object sender, DragEventArgs e)
         {
-            string[] caminho = (string[])(e.Data.GetData(DataFormats.FileDrop));
-            Database db = null;
+            lblTravar.BackColor = SystemColors.GradientInactiveCaption;
+            EvDragEnter(e);
+        }
 
-            try
-            {
-                var dbe = new DBEngine();
-                
-                db = dbe.OpenDatabase(caminho[0]);
-
-                try{db.Properties.Delete("AllowByPassKey");}
-                catch{}
-                    
-                var prop = db.CreateProperty("AllowByPassKey", 1, valor);
-                db.Properties.Append(prop);
-                if (valor == false)
-                {
-                    lblResult.BackColor = SystemColors.GradientInactiveCaption;
-                    lblResult.Text = "\"" + caminho[0] + "\"" + " travado!";
-                }
-                else if (valor == true)
-                {
-                    lblResult.BackColor = SystemColors.GradientInactiveCaption;
-                    lblResult.Text = "\"" + caminho[0] + "\"" + " destravado!";
-                }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("Erro inesperado ou arquivo inválido!\n\n" + err.Message , 
-                    null, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                if (db != null)
-                    db.Close();
-            }
+        private void lblTravar_DragDrop(object sender, DragEventArgs e)
+        {
+            Destravar(false, e);
+            lblTravar.BackColor = SystemColors.Control;
         }
 
         private void lblDestravar_DragEnter(object sender, DragEventArgs e)
@@ -83,7 +66,7 @@ namespace ShiftAccess
 
         private void lblDestravar_DragDrop(object sender, DragEventArgs e)
         {
-            AllowByPassKey(true, e);
+            Destravar(true, e);
             lblDestravar.BackColor = SystemColors.Control;
         }
 
@@ -112,5 +95,6 @@ namespace ShiftAccess
             frmSobre frm = new frmSobre();
             frm.ShowDialog();
         }
+
     }
 }

@@ -13,7 +13,7 @@ namespace ShiftAccess
 
         private string GetVersion()
         {
-            return "1.0.0.11";
+            return "1.0.12";
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
