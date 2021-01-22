@@ -1,6 +1,7 @@
 ﻿using Microsoft.Office.Interop.Access.Dao;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,24 @@ namespace ShiftAccess
                 _db.Properties.Delete("AllowByPassKey");
 
             var prop = _db.CreateProperty("AllowByPassKey", 1, _valor);
-            _db.Properties.Append(prop);
+            try
+            {
+                _db.Properties.Append(prop);
+            }
+            catch (Exception ex)
+            {
+                //Acontece em arquivos .mdb. Há uma falha no metodo "hasProperty", que nao identifica a propriedade
+                //"AllowByPassKey", apesar de existir.
+                if (ex.Message == "Cannot append. An object with that name already exists in the collection.")
+                {
+                    _db.Properties.Delete("AllowByPassKey");
+                    _db.Properties.Append(prop);
+                }
+                else
+                {
+                    throw;
+                }
+            }  
         }
 
         private static bool hasProperty(Database db, string nome)
