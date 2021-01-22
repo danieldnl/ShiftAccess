@@ -43,3 +43,4 @@ C:\projetos\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.Properties.Resources
 C:\projetos\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.csproj.GenerateResource.Cache
 C:\projetos\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.exe.manifest
 C:\projetos\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.application
+C:\projetos\ShiftAccess\ShiftAccess\obj\Release\ShiftAccess.csprojResolveAssemblyReference.cache
